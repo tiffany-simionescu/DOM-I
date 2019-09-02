@@ -50,6 +50,9 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 const circleImage = document.getElementById("cta-img");
 circleImage.setAttribute("src", siteContent["cta"]["img-src"]);
 
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
 // Anchors - Navigation
 let anchors = document.querySelectorAll("nav a");
 
@@ -78,3 +81,13 @@ mainHeader.appendChild(awesome);
 const buttonCta = document.querySelector("button");
 
 buttonCta.textContent = siteContent["cta"]["button"];
+
+// Main Content - h4
+
+const header4 = document.querySelectorAll(".main-content h4");
+
+header4[0].textContent = siteContent["main-content"]["features-h4"];
+header4[1].textContent = siteContent["main-content"]["about-h4"];
+header4[2].textContent = siteContent["main-content"]["services-h4"];
+header4[3].textContent = siteContent["main-content"]["product-h4"];
+header4[4].textContent = siteContent["main-content"]["vision-h4"];
