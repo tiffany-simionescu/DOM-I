@@ -84,10 +84,20 @@ buttonCta.textContent = siteContent["cta"]["button"];
 
 // Main Content - h4
 
-const header4 = document.querySelectorAll(".main-content h4");
+const mainContentHeader4 = document.querySelectorAll(".main-content h4");
 
-header4[0].textContent = siteContent["main-content"]["features-h4"];
-header4[1].textContent = siteContent["main-content"]["about-h4"];
-header4[2].textContent = siteContent["main-content"]["services-h4"];
-header4[3].textContent = siteContent["main-content"]["product-h4"];
-header4[4].textContent = siteContent["main-content"]["vision-h4"];
+mainContentHeader4[0].textContent = siteContent["main-content"]["features-h4"];
+mainContentHeader4[1].textContent = siteContent["main-content"]["about-h4"];
+mainContentHeader4[2].textContent = siteContent["main-content"]["services-h4"];
+mainContentHeader4[3].textContent = siteContent["main-content"]["product-h4"];
+mainContentHeader4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+// Main Content - p
+
+const mainContentP = document.querySelectorAll(".main-content p");
+
+mainContentP[0].textContent = siteContent["main-content"]["features-content"];
+mainContentP[1].textContent = siteContent["main-content"]["about-content"];
+mainContentP[2].textContent = siteContent["main-content"]["services-content"];
+mainContentP[3].textContent = siteContent["main-content"]["product-content"];
+mainContentP[4].textContent = siteContent["main-content"]["vision-content"];
