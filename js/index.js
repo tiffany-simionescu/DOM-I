@@ -43,6 +43,7 @@ const siteContent = {
 };
 
 // Images
+
 // Example: Update the img src for the logo
 const logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
@@ -54,6 +55,7 @@ const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 // Anchors - Navigation
+
 let anchors = document.querySelectorAll("nav a");
 
 anchors[0].textContent = siteContent["nav"]["nav-item-1"];
@@ -64,6 +66,7 @@ anchors[4].textContent = siteContent["nav"]["nav-item-5"];
 anchors[5].textContent = siteContent["nav"]["nav-item-6"];
 
 // H1 - Class cta
+
 let mainHeader = document.querySelector("h1");
 
 const br = document.createElement("br");
@@ -78,6 +81,7 @@ mainHeader.appendChild(br);
 mainHeader.appendChild(awesome);
 
 // Button - Class cta
+
 const buttonCta = document.querySelector("button");
 
 buttonCta.textContent = siteContent["cta"]["button"];
@@ -111,3 +115,9 @@ contactHeader4.textContent = siteContent["contact"]["contact-h4"];
 contactP[0].textContent = siteContent["contact"]["address"];
 contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
+
+// Footer
+
+const footerP = document.querySelector("footer p");
+
+footerP.textContent = siteContent["footer"]["copyright"];
