@@ -153,9 +153,12 @@ footerP.textContent = siteContent["footer"]["copyright"];
 
 // style of Nav
 for (let i = 0; i < anchors.length; i++) {
+  anchors[i].addEventListener("click", event => {
+    event.target.style.backgroundColor = "green";
+  });
   anchors[i].onmouseover = function() {
     this.style.textDecoration = "none";
-    this.style.color = "blue";
+    this.style.color = "red";
   };
   anchors[i].onmouseout = function() {
     this.style.textDecoration = "none";
@@ -166,7 +169,7 @@ for (let i = 0; i < anchors.length; i++) {
 // style of first and last nav items
 newAnchor.onmouseover = function() {
   this.style.textDecoration = "none";
-  this.style.color = "blue";
+  this.style.color = "red";
 };
 newAnchor.onmouseout = function() {
   this.style.textDecoration = "none";
@@ -175,10 +178,18 @@ newAnchor.onmouseout = function() {
 
 newAnchor2.onmouseover = function() {
   this.style.textDecoration = "none";
-  this.style.color = "blue";
+  this.style.color = "red";
 };
 
 newAnchor2.onmouseout = function() {
   this.style.textDecoration = "none";
   this.style.color = "green";
 };
+
+// Background Color Changes when Click 'Get Started' Button
+
+buttonCta.addEventListener("click", event => {
+  event.target.style.backgroundColor = "red";
+  event.target.style.color = "white";
+  event.target.textContent = "I've Been Clicked!";
+});
