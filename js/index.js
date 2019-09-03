@@ -65,6 +65,25 @@ anchors[3].textContent = siteContent["nav"]["nav-item-4"];
 anchors[4].textContent = siteContent["nav"]["nav-item-5"];
 anchors[5].textContent = siteContent["nav"]["nav-item-6"];
 
+// Change nav text to Green
+for (let i = 0; i < anchors.length; i++) {
+  anchors[i].style.color = "green";
+}
+
+// Added new Elements to Nav
+let newAnchor2 = document.createElement("a");
+newAnchor2.textContent = " Last";
+newAnchor2.style.color = "green";
+newAnchor2.style.marginLeft = "28px";
+
+let newAnchor = document.createElement("a");
+newAnchor.textContent = "First ";
+newAnchor.style.color = "green";
+newAnchor.style.marginRight = "28px";
+
+anchors[0].prepend(newAnchor);
+anchors[5].appendChild(newAnchor2);
+
 // H1 - Class cta
 
 let mainHeader = document.querySelector("h1");
