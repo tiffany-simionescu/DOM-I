@@ -68,7 +68,6 @@ anchors[5].textContent = siteContent["nav"]["nav-item-6"];
 // H1 - Class cta
 
 let mainHeader = document.querySelector("h1");
-// mainHeader.textContent = siteContent["cta"]["h1"];
 
 const lineBreak = document.createElement("br");
 const lineBreak2 = document.createElement("br");
@@ -77,7 +76,6 @@ const is = document.createTextNode("Is");
 const awesome = document.createTextNode("Awesome");
 
 mainHeader.appendChild(dom);
-// Need to add breaks
 mainHeader.appendChild(lineBreak);
 mainHeader.appendChild(is);
 mainHeader.appendChild(lineBreak2);
@@ -114,18 +112,15 @@ mainContentP[4].textContent = siteContent["main-content"]["vision-content"];
 const contactHeader4 = document.querySelector(".contact h4");
 const contactP = document.querySelectorAll(".contact p");
 
+const contactAddress1 = document.createTextNode("123 Way 456 Street");
+const contactAddress2 = document.createTextNode("Somewhere, USA");
+const lineBreak3 = document.createElement("br");
+
 contactHeader4.textContent = siteContent["contact"]["contact-h4"];
-// Need to add a break in address
 
-// const lineBreak3 = createElement("br");
-// const contactAddress1 = createTextNode("123 Way 456 Street");
-// const contactAddress2 = createTextNode("Somewhere, USA");
-
-contactP[0].textContent = siteContent["contact"]["address"];
-
-// contactP[0].appendChild(contactAddress1);
-// contactP[0].appendChild(lineBreak3);
-// contactP[0].appendChild(contactAddress2);
+contactP[0].appendChild(contactAddress1);
+contactP[0].appendChild(lineBreak3);
+contactP[0].appendChild(contactAddress2);
 contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
 
