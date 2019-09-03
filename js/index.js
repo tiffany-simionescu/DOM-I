@@ -148,3 +148,37 @@ contactP[2].textContent = siteContent["contact"]["email"];
 const footerP = document.querySelector("footer p");
 
 footerP.textContent = siteContent["footer"]["copyright"];
+
+// STRETCH GOALS
+
+// style of Nav
+for (let i = 0; i < anchors.length; i++) {
+  anchors[i].onmouseover = function() {
+    this.style.textDecoration = "none";
+    this.style.color = "blue";
+  };
+  anchors[i].onmouseout = function() {
+    this.style.textDecoration = "none";
+    this.style.color = "green";
+  };
+}
+
+// style of first and last nav items
+newAnchor.onmouseover = function() {
+  this.style.textDecoration = "none";
+  this.style.color = "blue";
+};
+newAnchor.onmouseout = function() {
+  this.style.textDecoration = "none";
+  this.style.color = "green";
+};
+
+newAnchor2.onmouseover = function() {
+  this.style.textDecoration = "none";
+  this.style.color = "blue";
+};
+
+newAnchor2.onmouseout = function() {
+  this.style.textDecoration = "none";
+  this.style.color = "green";
+};
