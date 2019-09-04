@@ -186,10 +186,23 @@ newAnchor2.onmouseout = function() {
   this.style.color = "green";
 };
 
-// Background Color Changes when Click 'Get Started' Button
+// Header Image Changes when Click 'Get Started' Button
+// const catImage = document.createElement("img");
+// catImage.setAttribute("src", "/img/cat-image.jpg");
+// catImage.setAttribute("alt", "Cute Kitty!");
 
 buttonCta.addEventListener("click", event => {
+  circleImage.setAttribute("src", "/img/cat-image.jpg");
+  circleImage.setAttribute("alt", "Cute Kitty!");
   event.target.style.backgroundColor = "red";
   event.target.style.color = "white";
   event.target.textContent = "I've Been Clicked!";
+});
+
+buttonCta.addEventListener("dblclick", event => {
+  circleImage.setAttribute("src", "/img/bird-image.jpg");
+  circleImage.setAttribute("alt", "Cute Birdy!");
+  event.target.style.backgroundColor = "blue";
+  event.target.style.color = "white";
+  event.target.textContent = "Clicked Twice!";
 });
