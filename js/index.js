@@ -160,40 +160,43 @@ for (let i = 0; i < anchors.length; i++) {
     anchors[i].style.textDecoration = "none";
     event.target.style.backgroundColor = "green";
   });
-  anchors[i].onmouseover = function() {
+
+  anchors[i].addEventListener("onmouseover", event => {
     this.style.textDecoration = "none";
     this.style.color = "red";
-  };
-  anchors[i].onmouseout = function() {
+  });
+
+  anchors[i].addEventListener("onmouseout", event => {
     this.style.textDecoration = "none";
     this.style.color = "green";
-  };
+  });
 }
 
 // Stopped Propagation on child nodes
 
-newAnchor.onmouseover = function(event) {
+newAnchor.addEventListener("onmouseover", event => {
   this.style.textDecoration = "none";
   this.style.color = "red";
   event.stopPropagation();
-};
-newAnchor.onmouseout = function(event) {
+});
+
+newAnchor.addEventListener("onmouseout", event => {
   this.style.textDecoration = "none";
   this.style.color = "green";
   event.stopPropagation();
-};
+});
 
-newAnchor2.onmouseover = function(event) {
+newAnchor2.addEventListener("onmouseover", event => {
   this.style.textDecoration = "none";
   this.style.color = "red";
   event.stopPropagation();
-};
+});
 
-newAnchor2.onmouseout = function(event) {
+newAnchor2.addEventListener("onmouseout", event => {
   this.style.textDecoration = "none";
   this.style.color = "green";
   event.stopPropagation();
-};
+});
 
 // Event Listeners for single and double click
 
