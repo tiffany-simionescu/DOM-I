@@ -156,11 +156,44 @@ footerP.textContent = siteContent["footer"]["copyright"];
 // style of Nav
 
 for (let i = 0; i < anchors.length; i++) {
-  anchors[i].style.textDecoration = "none";
+  anchors[i].addEventListener("click", event => {
+    anchors[i].style.textDecoration = "none";
+    event.target.style.backgroundColor = "green";
+  });
+  anchors[i].onmouseover = function() {
+    this.style.textDecoration = "none";
+    this.style.color = "red";
+  };
+  anchors[i].onmouseout = function() {
+    this.style.textDecoration = "none";
+    this.style.color = "green";
+  };
 }
 
-newAnchor.style.textDecoration = "none";
-newAnchor2.style.textDecoration = "none";
+// Stopped Propagation on child nodes
+
+newAnchor.onmouseover = function(event) {
+  this.style.textDecoration = "none";
+  this.style.color = "red";
+  event.stopPropagation();
+};
+newAnchor.onmouseout = function(event) {
+  this.style.textDecoration = "none";
+  this.style.color = "green";
+  event.stopPropagation();
+};
+
+newAnchor2.onmouseover = function(event) {
+  this.style.textDecoration = "none";
+  this.style.color = "red";
+  event.stopPropagation();
+};
+
+newAnchor2.onmouseout = function(event) {
+  this.style.textDecoration = "none";
+  this.style.color = "green";
+  event.stopPropagation();
+};
 
 // Event Listeners for single and double click
 
